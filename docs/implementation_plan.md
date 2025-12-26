@@ -59,6 +59,8 @@ We will add these packages to `pubspec.yaml`:
 
 #### [NEW] `lib/screens/add_transaction_screen.dart`
 - A form with inputs for Title, Amount, and a Date Picker.
+- **Refinement**: Default the transaction date to the current date.
+- **Refinement**: Restrict the amount field to numeric input only using `inputFormatters`.
 
 ## Verification Plan
 ### Automated Tests

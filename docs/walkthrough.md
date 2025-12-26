@@ -17,7 +17,8 @@ It supports:
 ### 2. Add Transaction
 - Enter **Title** (e.g., "Lunch").
 - Enter **Amount** (e.g., "15.50").
-- Pick a **Date**.
+- **Date**: Defaults to the current date for convenience. You can still tap **Choose Date** to change it.
+    - ![Default Date UI](file:///C:/Users/Mrinal/.gemini/antigravity/brain/df3b42bf-56c6-4517-838d-bf61246b04e7/add_transaction_default_date_1766770616162.png)
 - Select **Category** (Food, Travel, etc.).
 - Tap "Add Transaction" to save.
 

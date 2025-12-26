@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart'; // Add this for input formatters
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import '../models/transaction.dart';
@@ -15,7 +15,7 @@ class AddTransactionScreen extends StatefulWidget {
 class _AddTransactionScreenState extends State<AddTransactionScreen> {
   final _titleController = TextEditingController();
   final _amountController = TextEditingController();
-  DateTime? _selectedDate;
+  DateTime? _selectedDate = DateTime.now();
   Category _selectedCategory = Category.other;
 
   void _presentDatePicker() async {
@@ -72,6 +72,9 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
               controller: _amountController,
               decoration: const InputDecoration(labelText: 'Amount'),
               keyboardType: const TextInputType.numberWithOptions(decimal: true),
+              inputFormatters: [
+                FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*')),
+              ],
             ),
             const SizedBox(height: 20),
             Row(
